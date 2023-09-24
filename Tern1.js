@@ -40,12 +40,8 @@ let result3;
 switch (true) {
     case (a>10):
         result3=a
-        
-        
-    case (a<10):
+    default:
         result3=a*2
-        
-        
 }
 
 switch (true) {        
