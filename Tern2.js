@@ -77,7 +77,7 @@ function manyChecks() {
   }
 
   switch (true) {
-      case (a % 2):
+      case ((a % 2)!==0):
           result3 += ' and a is odd'
           break
       default:
@@ -89,12 +89,8 @@ function manyChecks() {
 }
 
 result=manyChecks()
-// console.log("Тернарный оператор:", result1);
-// console.log("if...else:", result2);
-// console.log("switch():", result3);
+
 
 console.log(result[0]);
 console.log(result[1]);
 console.log(result[2]);
-// условие с условным (тернарным) оператором перевести в if...else И switch()
-// результат выводить в консоль, с пощью console.log()
