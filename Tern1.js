@@ -1,7 +1,7 @@
 let a = Math.floor(Math.random() * 100);
-console.log("a =",a)
-console.log("Тернарный оператор: ",(a > 10 ? a : a * 2) > 5 ? (2 * a) + 1 : (a < 3 ? 1 : 2 * (a - 2)) > 4 ? 5 : (a % 2 == 0 ? 6 : 7));
 
+
+// if...else
 let result2;
 
 while(true){
@@ -34,77 +34,47 @@ if (result2 > 4) {
 }
 
 
-
+// switch()
 let result3;
 
 switch (true) {
     case (a>10):
         result3=a
-        switch (true) {        
-            case (result3>5):
-                result3=(2 * a) + 1
-                break
-            default:
-                switch (true) {        
-                    case (a<3):
-                        result3=1
-                    default:
-                        result3=2 * (a - 2)
-                }
-                switch (true) {
-                    case (result3>4):
-                        result3=5
-                        break
-                    default:
-                        switch (true) {
-                            case (a % 2 == 0):
-                                result3=6
-                                break
-                            default:
-                                result3=7
-                                break
-                        }
-                }
-        }
+        
         
     case (a<10):
         result3=a*2
-        switch (true) {        
-            case (result3>5):
-                result3=(2 * a) + 1
-                break
-            default:
-                switch (true) {        
-                    case (a<3):
-                        //console.log("switch():")
-                        result3=1
-                    default:
-                        //console.log("switch():")
-                        result3=2 * (a - 2)
-                }
-                switch (true) {
-                    case (result3>4):
-                        result3=5
-                        break
-                    default:
-                        switch (true) {
-                            case (a % 2 == 0):
-                                result3=6
-                                break
-                            default:
-                                result3=7
-                                break
-                        }
-                }
-        }
+        
         
 }
 
-
-
-// условие с условным (тернарным) оператором перевести в if...else И switch()
-// результат выводить в консоль, с пощью console.log()
-
-//console.log("result1:", result1)
+switch (true) {        
+    case (result3>5):
+        result3=(2 * a) + 1
+        break
+    default:
+        switch (true) {        
+            case (a<3):
+                result3=1
+            default:
+                result3=2 * (a - 2)
+        }
+        switch (true) {
+            case (result3>4):
+                result3=5
+                break
+            default:
+                switch (true) {
+                    case (a % 2 == 0):
+                        result3=6
+                        break
+                    default:
+                        result3=7
+                        break
+                }
+        }
+}
+console.log("a =",a)
+console.log("Тернарный оператор: ",(a > 10 ? a : a * 2) > 5 ? (2 * a) + 1 : (a < 3 ? 1 : 2 * (a - 2)) > 4 ? 5 : (a % 2 == 0 ? 6 : 7));
 console.log("if...else:", result2)
 console.log("switch():", result3)
