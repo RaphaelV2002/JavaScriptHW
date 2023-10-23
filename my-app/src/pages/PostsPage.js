@@ -61,16 +61,16 @@ export const PostsPage = () => {
 
     // ...
   };
-  const getPostsByUserId = (userId) => {
-    return posts.filter((post) => post.userId === userId);
+  const getUserByPost = (post) => {
+    return users.filter((user) => post.userId === user.id);
   };
   return (
     <>
       <p>Posts:</p>
       <Stack direction={"row"} wrap={"wrap"}>
-        {users.map((user) => (
+        {posts.map((post) => (
           <>
-            {getPostsByUserId(user.id).map((post) => (
+            {getUserByPost(post).map((user) => (
               <Card key={post.id} border={"1px"} m={2} width={200}>
                 <CardHeader>{user.name}</CardHeader>
                 <CardBody>
